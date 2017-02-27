@@ -1,0 +1,4 @@
+#!/bin/sh
+
+pub get
+dart bin/server.dart prep

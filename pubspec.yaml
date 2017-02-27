@@ -1,0 +1,8 @@
+name: 'shortener'
+version: 0.0.1
+
+environment:
+  sdk: '>=1.13.0 <2.0.0'
+
+dependencies:
+  crypto: "^2.0.1"
