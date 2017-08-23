@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec dart bin/server.dart $1

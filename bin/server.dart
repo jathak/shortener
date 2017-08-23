@@ -4,9 +4,14 @@ import 'package:crypto/crypto.dart';
 import 'dart:math' show Random;
 import 'dart:convert' show JSON;
 
-main(args) {
+main(args) async {
   if (args.first == 'prep') {
     return prep();
+  }
+  var datapath = Platform.script.resolve('../data.json').toFilePath();
+  var file = new File(datapath);
+  if (!(await file.exists())) {
+    prep();
   }
   int port = int.parse(args.first);
   runZoned(() => server(port), onError: (e, stackTrace) {
